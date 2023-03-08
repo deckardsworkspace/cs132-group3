@@ -1,0 +1,17 @@
+name: GitHub Pages PR preview
+
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  build:
+    name: Deploy PR Preview
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy PR Preview
+      uses: rossjrw/pr-preview-action@v1.3.0

@@ -1,3 +1,7 @@
+# Intermediate notebooks
+fixed.ipynb
 input.ipynb
+
+# Python stuff
 .venv
 .python-version

@@ -1,16 +1,23 @@
 all: convert
 
-convert:
-	python -m jupyter nbconvert --to html --inplace --execute \
+convert: execute to-html
+from-colab: execute-colab to-html
+
+execute:
+	python -m jupyter nbconvert --inplace --execute \
 		--output index cs132_data_exploration.ipynb
 
-from-colab: fix-json
-	python -m jupyter nbconvert --to html --inplace --execute \
-		--output index input.ipynb
+execute-colab: fix-json
+	python -m jupyter nbconvert --inplace --execute \
+		--output index fixed.ipynb
+
+to-html:
+	python -m jupyter nbconvert --to html \
+		--output index index.ipynb
 
 fix-json:
 	jq -M 'del(.metadata.widgets)' cs132_data_exploration.ipynb \
-		> input.ipynb
+		> fixed.ipynb
 
 clean:
 	rm -f input.ipynb index.html

@@ -1,11 +1,11 @@
 all: convert
 
 convert:
-	python -m jupyter nbconvert --to html \
+	python -m jupyter nbconvert --to html --inplace --execute \
 		--output index cs132_data_exploration.ipynb
 
 from-colab: fix-json
-	python -m jupyter nbconvert --to html \
+	python -m jupyter nbconvert --to html --inplace --execute \
 		--output index input.ipynb
 
 fix-json:

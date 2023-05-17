@@ -1,11 +1,11 @@
 all: convert
 
 convert:
-	.venv/bin/python -m jupyter nbconvert --to html \
+	python -m jupyter nbconvert --to html \
 		--output index cs132_data_exploration.ipynb
 
 from-colab: fix-json
-	.venv/bin/python -m jupyter nbconvert --to html \
+	python -m jupyter nbconvert --to html \
 		--output index input.ipynb
 
 fix-json:

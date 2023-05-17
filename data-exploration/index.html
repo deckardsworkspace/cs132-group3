@@ -20937,20 +20937,15 @@ In addition, while words are being removed, the remaining words will be turned i
 <span class="n">tweets_en_clean</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets_en</span><span class="p">:</span>
   <span class="n">tweet</span> <span class="o">=</span> <span class="n">tweet</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^\w\s]+&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+  <span class="c1">#Tokenizing the column</span>
   <span class="n">tokenized</span> <span class="o">=</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
-
+  <span class="c1">#Turning to lowercase by including .lower() and removing stop words as well</span>
   <span class="n">filtered</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">tokenized</span> <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
   <span class="n">tokenized_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filtered</span><span class="p">)</span>
   <span class="n">tweets_en_clean</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">filtered</span><span class="p">))</span>
 
 
 <span class="n">df_tweets</span><span class="p">[</span><span class="s1">&#39;Tokenized Tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tokenized_list</span>
-
-<span class="c1">#Removal of punctuations</span>
-<span class="c1">#df_tweets[&#39;Tokenized Tweet&#39;] = df_tweets[&#39;Tokenized Tweet&#39;].str.replace(r&#39;[^\w\s]+&#39;,&#39;&#39;)</span>
-
-<span class="c1">#Tokenizing the tweets</span>
-<span class="c1">#df_tweets[&#39;Tokenized Tweet&#39;] = df_tweets[&#39;Tokenized Tweet&#39;].apply(str.split)</span>
 
 <span class="n">df_tweets</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_properties</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s1">&#39;text-align&#39;</span><span class="p">:</span> <span class="s1">&#39;left&#39;</span><span class="p">})</span>
 </pre></div>
@@ -23690,6 +23685,7 @@ let's look forward to Angel Locsin's Drama facewithtearsofjoy facewithtearsofjoy
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Word-Cloud">Word Cloud<a class="anchor-link" href="#Word-Cloud">&#182;</a></h3>
 <p>One analysis that we can perfom is to generate a word cloud to see which words are prominent in the tweets regarding Neri Colmenares.</p>
 
 </div>
@@ -23815,6 +23811,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Sentiment-Analysis">Sentiment Analysis<a class="anchor-link" href="#Sentiment-Analysis">&#182;</a></h3>
 <p>In addition to a word cloud, a basic sentiment analysis can be done to check the general sentiment of the tweets. In order to do this, a pre-trained sentiment analysis model from Hugging Face Hub  (huggingface.co) was used.</p>
 
 </div>

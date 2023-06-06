@@ -1,6 +1,7 @@
 # Intermediate notebooks
 fixed.ipynb
 input.ipynb
+.DS_Store
 
 # Python stuff
 .venv

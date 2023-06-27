@@ -179,10 +179,6 @@
 							</article>
 						</div>
 					</div>
-					<footer>
-						<p><b>Interested to take a closer look at our methodology?</b></p>
-					<a href="model-and-results/" class="button large scrolly">Take a look at our portfolio here!</a>
-					</footer>
 				</div>
 			</article>
 
@@ -197,21 +193,42 @@
 						<div class="col-6 col-6-medium col-12-small">
 							<article class="box style2">
 								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">Results</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
+								<h3><a href="#">Statistical testing</a></h3>
+								<p>Mann-Whitney U testing shows a significant change (p &le; 0.05) in average daily Tweet frequency
+									before and after election dates, and in- and outside the official campaign period.</p>
+								<p>The dataset was shown to have some positive correlation in lags &lt; 11 days (max 0.271
+									at k=1), suggesting that the results might not indicate a change as significant as the
+									test suggests, presenting a limitation to these findings.</p>
+								</p>
 							</article>
 						</div>
 						<div class="col-6 col-6-medium col-12-small">
 							<article class="box style2">
 								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-								<h3><a href="#">Results</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
+								<h3><a href="#">Machine learning</a></h3>
+								<p>Predictors based on the <code>scikit-learn</code> decision tree and gradient boosting
+								regression models were trained from the first 45 days prior to the campaign period to
+								observe their corresponding cumulative sums.</p>
+								<p>Both models predicted cumulative Tweet frequency sums lower than the actual cumulative Tweet
+									frequency sum during and beyond the campaign period.</p>
+								</p>
 							</article>
 						</div>
 					</div>
 					<footer>
-						<p>Want to learn more? Take a look at our source codes.</p>
-						<a href="#contact" class="button large scrolly">Github Repo</a>
+						<p>
+							Current results point towards a significant correlation between the timing
+							(of the elections and the campaign period) and the shift in the frequency of tweets
+							as seen in the results of the Mann-Whitney U test and basic predictors. While
+							this doesn't confirm that a smear campaign caused this, some factor did.
+						</p>
+						<p>
+							The researchers recommend further analysis of the data as the Mann-Whitney U test
+							does not explicitly account for temporal dependencies. Validating the assumptions 
+							of the test and incorporating additional variables that may impact the time series
+							analysis could lead to more insights and provide clearer answers.
+						</p>
+						<a href="model-and-results/" class="button large scrolly">View methods and results</a>
 					</footer>
 				</div>
 			</article>

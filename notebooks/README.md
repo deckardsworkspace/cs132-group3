@@ -1,4 +1,4 @@
-# data-exploration
+# notebooks
 
 ## Setup
 
@@ -27,13 +27,13 @@ make
 If not,
 
 ```bash
-jupyter nbconvert --to html --output index cs132_data_exploration.ipynb
+jupyter nbconvert --to html --output index <notebook>.ipynb
 ```
 
 If you're converting a notebook downloaded from Google Colab, `jupyter-nbconvert` will throw a `KeyError` regarding the notebook's metadata. You will need to remove the `widgets` key from the metadata, either through a text editor or using the `jq` command (install from [here](https://stedolan.github.io/jq/download/)):
 
 ```bash
-jq -M 'del(.metadata.widgets)' cs132_data_exploration.ipynb > input.ipynb
+jq -M 'del(.metadata.widgets)' <notebook>.ipynb > input.ipynb
 ```
 
 Then convert to HTML:

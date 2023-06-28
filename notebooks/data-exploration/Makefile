@@ -5,7 +5,7 @@ from-colab: execute-colab to-html
 
 execute:
 	python -m jupyter nbconvert --inplace --execute \
-		--output index cs132_data_exploration.ipynb
+		--output index data_exploration.ipynb
 
 execute-colab: fix-json
 	python -m jupyter nbconvert --inplace --execute \
@@ -16,7 +16,7 @@ to-html:
 		--output index index.ipynb
 
 fix-json:
-	jq -M 'del(.metadata.widgets)' cs132_data_exploration.ipynb \
+	jq -M 'del(.metadata.widgets)' data_exploration.ipynb \
 		> fixed.ipynb
 
 clean:

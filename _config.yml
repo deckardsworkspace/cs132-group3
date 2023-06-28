@@ -44,3 +44,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - notebooks/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

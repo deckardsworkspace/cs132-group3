@@ -28,6 +28,9 @@ url: "https://dantis.me" # the base hostname & protocol for your site, e.g. http
 twitter_username: jareddantis
 github_username:  jareddantis
 
+# Custom vars
+github_repo: https://github.com/jareddantis/cs132-group3
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

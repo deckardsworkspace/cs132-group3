@@ -1,0 +1,6 @@
+# Python, Pyenv
+**/.venv/
+**/.python-version
+
+# Generated HTML
+**/*.html

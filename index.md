@@ -32,6 +32,8 @@ Analyze the timestamps of the tweets linking Neri Colmenares with the CPP-NPA-ND
 
 Here, we explore the data that we have gathered. We also show the results of our analysis.
 
+Take a look at our data exploration [here.]({{ site.baseurl }}/public/data_exploration.html)
+
 ## Data gathering
 
 We scraped Twitter for data surrounding tweets regarding Neri Colmenares' alleged ties to the CPP-NPA-NDF and submitted it for further validation. You can find the scripts we used for data gathering [here.](https://github.com/jareddantis/cs132-group3-scripts)
@@ -49,7 +51,7 @@ As part of our data exploration, we visualized the data through interactive plot
 
 We performed statistical testing to check for the significance of the difference of tweet frequency between data groups of interest and created models that predicted the expected tweet frequency had no significant interference been made during the campaign period and beyond.
 
-Take a look at our results [here.]({{ site.baseurl }}/2023/06/24/results.html)
+Take a look at our analysis [here.]({{ site.baseurl }}/public/modeling_analysis.html)
 
 ## Statistical testing
 

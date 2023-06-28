@@ -1,0 +1,7 @@
+html {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+#sidebar-logo {
+  filter: brightness(0) invert(1);
+}

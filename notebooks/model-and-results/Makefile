@@ -13,10 +13,10 @@ execute-colab: fix-json
 
 to-html:
 	python -m jupyter nbconvert --to html \
-		--output index --HTMLExporter.theme=dark index.ipynb
-	sed -i .orig \
+		--output modeling_analysis --HTMLExporter.theme=dark index.ipynb
+	sed --in-place=.orig \
 		's/<title>.*<\/title>/<title>G3 Portfolio \| Modeling and Analysis<\/title>/g' \
-		index.html
+		modeling_analysis.html
 
 fix-json:
 	jq -M 'del(.metadata.widgets)' results.ipynb \

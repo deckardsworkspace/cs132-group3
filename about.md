@@ -22,3 +22,5 @@ Despite not having a lot of experience in data science, the group set out to tak
 ![Mike]({{ site.baseurl }}/public/images/team/photoMike.jpg)
 
 ***Michael Morco*** (WFW) is a computer science senior with interests in web development, IoT, and big data.
+
+Feel free to contact the team [here](https://forms.gle/dJCe6xXtFwiZ9UkV9).

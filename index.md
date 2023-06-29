@@ -68,8 +68,10 @@ Predictors based on the scikit-learn decision tree and gradient boosting regress
 Both models predicted cumulative Tweet frequency sums lower than the actual cumulative Tweet frequency sum during and beyond the campaign period.
 
 
-# Conclusion
+# Data Communication
 
 Current results point towards a significant correlation between the timing (of the elections and the campaign period) and the shift in the frequency of tweets as seen in the results of the Mann-Whitney U test and basic predictors. While this doesn't confirm that a smear campaign caused this, some factor did.
 
 The researchers recommend further analysis of the data as the Mann-Whitney U test does not explicitly account for temporal dependencies. Validating the assumptions of the test and incorporating additional variables that may impact the time series analysis could lead to more insights and provide clearer answers.
+
+Take a look at our comprehensive data communication report [here]({{ site.baseurl }}/comm.html).

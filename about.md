@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Meet the team
+title: About Us
 ---
 
 ![The team]({{ site.baseurl }}/public/images/team/photoGroup.jpg)

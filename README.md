@@ -2,7 +2,15 @@
 
 This repository contains the source code for NeriTweet's website and Jupyter Notebooks.
 
-The website uses the [Hyde theme](https://github.com/poole/hyde) for Jekyll under the [MIT License.]
+The website uses the [Hyde theme](https://github.com/poole/hyde) for Jekyll under the [MIT License.](#theme-license)
+
+## Testing the website
+
+The website is built with Jekyll. Ensure you have Ruby and Bundler installed, then run `bundle install` to install the dependencies.
+
+To test the website, run `bundle exec jekyll serve` and navigate to `localhost:4000/cs132-group3/`.
+
+## Theme license
 
 ```
 Hyde theme license

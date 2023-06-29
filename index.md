@@ -74,4 +74,4 @@ Current results point towards a significant correlation between the timing (of t
 
 The researchers recommend further analysis of the data as the Mann-Whitney U test does not explicitly account for temporal dependencies. Validating the assumptions of the test and incorporating additional variables that may impact the time series analysis could lead to more insights and provide clearer answers.
 
-Take a look at our comprehensive data communication report [here]({{ site.baseurl }}/comm.html).
+Take a look at our comprehensive data communication report [here]({{ site.baseurl }}/data-communication.html).

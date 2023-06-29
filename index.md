@@ -55,7 +55,7 @@ Take a look at our analysis [here.]({{ site.baseurl }}/public/modeling_analysis.
 
 ## Statistical testing
 
-To examine the behavior of the frequency of tweets surrounding significant dates in the 2022 elections, a two-sample t-test was done surrounding the campaign period and election date.
+To examine the behavior of the frequency of tweets surrounding significant dates in the 2022 elections, a Mann-Whitney U test was done surrounding the campaign period and election date.
 
 Mann-Whitney U testing shows a significant change (p ≤ 0.05) in average daily Tweet frequency before and after election dates, and in- and outside the official campaign period.
 

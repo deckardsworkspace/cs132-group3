@@ -1,3 +1,12 @@
+# sed -i works differently on Darwin, so we have to handle it manually
+SED_FLAGS := --in-place=.orig
+ifneq ($(OS),Windows_NT)
+	UNAME_S := $(shell uname -s)
+	ifeq ($(UNAME_S),Darwin)
+		SED_FLAGS := -i .orig
+	endif
+endif
+
 all: convert
 
 convert: execute to-html
@@ -14,7 +23,7 @@ execute-colab: fix-json
 to-html:
 	python -m jupyter nbconvert --to html \
 		--output data_exploration --HTMLExporter.theme=dark index.ipynb
-	sed --in-place=.orig \
+	sed $(SED_FLAGS) \
 		's/<title>.*<\/title>/<title>G3 Portfolio \| Data Exploration<\/title>/g' \
 		data_exploration.html
 

@@ -44,7 +44,7 @@ While our findings point towards a significant difference across key time period
 
 To help ascertain the involvement of a smear campaign, future work could look into the types of accounts posting these allegations to see the likelihood that troll farms were employed and to look into the rest of the tweets that this study did not account for  to look at whether the difference found in this project is proportionate to the behavior of tweets about Neri Colmenares in general.
 
-# Implications and future work
+## Implications and future work
 
 While our findings point towards a significant difference across key time periods of the 2022 elections, it’s not conclusive enough for us to determine whether a smear campaign was involved. One of the possible alternative implications of these results is an increase in discourse surrounding Neri Colmenares’ alleged affiliation with the CPP-NPA-NDF – which could be a result of the expected general increase in discourse during the campaign period and before the elections.
 

@@ -7,21 +7,28 @@ ifneq ($(OS),Windows_NT)
 	endif
 endif
 
+# Check if we are using Python 3.11+
+PYTHON_VERSION := $(shell python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
+PYFLAGS :=
+ifeq ($(shell expr $(PYTHON_VERSION) \>= 3.11), 1)
+	PYFLAGS += PYDEVD_DISABLE_FILE_VALIDATION=1
+endif
+
 all: convert
 
 convert: execute to-html
 from-colab: execute-colab to-html
 
 execute:
-	python -m jupyter nbconvert --inplace --execute \
+	$(PYFLAGS) python -m jupyter nbconvert --inplace --execute \
 		--output index data_exploration.ipynb
 
 execute-colab: fix-json
-	python -m jupyter nbconvert --inplace --execute \
+	$(PYFLAGS) python -m jupyter nbconvert --inplace --execute \
 		--output index fixed.ipynb
 
 to-html:
-	python -m jupyter nbconvert --to html \
+	$(PYFLAGS) python -m jupyter nbconvert --to html \
 		--output data_exploration --HTMLExporter.theme=dark index.ipynb
 	sed $(SED_FLAGS) \
 		's/<title>.*<\/title>/<title>G3 Portfolio \| Data Exploration<\/title>/g' \

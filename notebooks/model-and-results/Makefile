@@ -32,4 +32,4 @@ fix-json:
 		> fixed.ipynb
 
 clean:
-	rm -f input.ipynb index.html
+	rm -f input.ipynb index.ipynb index.html modeling_analysis.html.orig
